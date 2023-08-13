@@ -1,0 +1,53 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href='{% static "css/Skeleton-2.0.4/css/skeleton.css" %}'/>
+        <link rel="stylesheet" type="text/css" href='{% static "css/Skeleton-2.0.4/css/normalize.css" %}'/>
+        <link rel="stylesheet" type="text/css" href='{% static "css/style.css" %}'/>
+    </head>
+    <body>
+        <div class="row">
+            <div class="twelve columns">
+                <div class="wrapper">
+                    <h1>Simple Model</h1>
+                    <p>
+                        This is a simple Naive Bayes spam classifier. This model will predict whether or not your email is spam. Type an email that you would
+                        like to classify.
+                    </p>
+                    <div class="card">
+                        <div class="new-email padded">
+                       
+                        </div>
+                        <div class="email-info padded">
+                            <input class="u-full-width" type="email" placeholder="test@mailbox.com (this field is just for decoration)" id="exampleEmailInput">
+                
+                            <input class="u-full-width" type="text" placeholder="Subject (this field is just for decoration)" id="subjectInput">
+                        </div>
+                        <div class="padded">
+                            <form method="POST" action=".">
+                                {%csrf_token %}
+                                {{ form }}
+                                <br>
+                                <br>
+                                <input class="button-primary" type="submit" value="Send">
+                            </form>
+                        </div>
+                       
+                        {% if result and result.0 == 1 %}
+                            <p>THIS IS SPAM BOY!</p>
+                        {% else %}
+                            <p>This is not spam...</p>
+                        {% endif %}
+                        
+                       
+                       
+                    </div>
+                    <br>
+                    
+                    <small>By Nathan Ameyaw Abuaku</small>
+                </div>
+            </div>
+        </div>
+      
+    </body>
+</html>
