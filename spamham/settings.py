@@ -88,7 +88,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'spamham.wsgi.application'
 
-# CSRF_TRUSTED_ORIGINS = ['https://spamham-production.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://*spamham-production.up.railway.app', 'https://spamham-production.up.railway.app']
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
