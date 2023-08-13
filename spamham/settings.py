@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'spamham',
 ]
 
-CSRF_TRUSTED_ORIGINS = ['spamham-production.up.railway.app', '*spamham-production.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://spamham-production.up.railway.app', 'https://*.spamham-production.up.railway.app']
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
