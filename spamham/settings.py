@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'spamham',
 ]
 
+CSRF_TRUSTED_ORIGINS = ['spamham-production.up.railway.app', '*spamham-production.up.railway.app']
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     "whitenoise.middleware.WhiteNoiseMiddleware",
