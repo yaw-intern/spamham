@@ -1,1 +1,1 @@
-web gunicorn spamham.wsgi
+web: gunicorn spamham.wsgi --log-file -
