@@ -33,8 +33,8 @@
                             </form>
                         </div>
                        
-                        {% if result and result.0 == 1 %}
-                            <p>THIS IS SPAM BOY!</p>
+                        {% if result is not None and result.0 == 1 %}
+                            <p>THIS IS SPAM!</p>
                         {% else %}
                             <p>This is not spam...</p>
                         {% endif %}
@@ -48,6 +48,8 @@
                 </div>
             </div>
         </div>
-      
+      <script>
+
+      </script>
     </body>
 </html>

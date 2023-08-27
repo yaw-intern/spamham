@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-6u)2l-(r(x64a%ae26o*jt2k_*%vn0p*_26tja%hx&u7phppmh
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['spamham-production.up.railway.app']
+ALLOWED_HOSTS = ['spamham-production.up.railway.app', '127.0.0.1']
 
 
 # Application definition
@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'spamham',
 ]
 
-CSRF_TRUSTED_ORIGINS = ['https://spamham-production.up.railway.app', 'https://*.spamham-production.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://spamham-production.up.railway.app', 'https://*.spamham-production.up.railway.app', 'https://127.0.0.1']
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

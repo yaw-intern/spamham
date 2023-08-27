@@ -16,8 +16,12 @@ def simple_model(request):
         msg_count = cv.transform(msg)
         result = model.predict(msg_count)
         
-    ctx = {
-        'form':classiy_form,
-        'result':result,
-    }
-    return render(request, 'indexx.html', ctx)
+        ctx = {
+            'form':classiy_form,
+            'result':result,
+        }
+
+        return render(request, 'indexx.html', ctx)
+    else:
+        ctx={'form':classiy_form, 'result':None}
+        return render(request, 'indexx.html', ctx)
