@@ -4,5 +4,5 @@ from django.conf.urls.static import static
 from . import views
 
 urlpatterns = [
-    path('simple_model/', views.simple_model, name='simple_model'),
+    path('', views.simple_model, name='simple_model'),
 ] 
